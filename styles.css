@@ -1,0 +1,23 @@
+/* Styling for map container */
+#map {
+    height: 400px; /* Adjust height as needed */
+    width: 100%; /* Full width */
+    border: 1px solid #ccc; /* Add border for visualization */
+    margin-top: 20px; /* Add space above the map */
+}
+
+/* Styling for page content */
+.container {
+    max-width: 800px; /* Limit width for content */
+    margin: 0 auto; /* Center content horizontally */
+    padding: 20px; /* Add padding for spacing */
+    text-align: center; /* Center align text */
+}
+
+h1 {
+    color: #333; /* Heading color */
+}
+
+p {
+    color: #666; /* Paragraph text color */
+}
