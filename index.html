@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,17 +10,69 @@
     <!-- Include Mapbox GL JS library -->
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="index.css" title="style" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300&display=swap" rel="stylesheet" />
 </head>
+
+
 <body>
-    <div class="container">
-        <h1>Mapbox GL JS Demo</h1>
-        <p>Welcome to the Mapbox GL JS demo. This page showcases a simple map created using Mapbox GL JS.</p>
+
+    <header>
+        <h1 id="title">Mapbox and Geoapify Demo</h1>
+    </header>
+    <p id="description">
+        <i>Below are a few APIs that we will be utilizing for our project.</i>
+    </p>
+
+
+
+    <form id="survey-form" action="null" method="null">
+        <div class="form-group">
+            <label for="name" id="name-label" style="text-align: center; font-size: 3rem;"> Mapbox API: Mapbox GL JS </label>
+            <p style="color: white; text-align: center;">Mapbox GL JS creates map object. Creating a map object allows us to modify the map and trigger events based on user's location.</p>
+
+            <!-- Map container -->
+            <div id='map' style="margin-bottom: 50px;"></div>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 50px;">
+            <label for="name" id="name-label" style="text-align: center; font-size: 3rem;">Geoapify API</label>
+            <p style="color: rgb(20, 185, 61); text-align: center; font-family: monospace; font-weight: bolder;">'navigator.geolocation'</p>
+            <p style="color: white; text-align: center;"> is the browser's built-in interface to obtain user's location</p>
+
+            <img class="image" src="/images/web.png" alt="web-location-access">
+            <img class="image" src="/images/mobile.jpg" alt="web-location-access">
+        </div>
+
+        <div class="form-group" style="margin-bottom: 55px;">
+            <label for="name" id="name-label" style="color: rgb(20, 185, 61); text-align: center; font-family: monospace; font-weight: bolder; font-size: 1.5rem;"> navigator.geolocation</label>
+            <p style="color: white; text-align: center;"> when used with methods like '<i style="color: red; font-weight: bolder;">getCurrentPosition(<span style="color: white;">...</span>)</i>', you can retrieve current coordinates of a user.</p>
+            
+        </div>
+
+        <p id="description" style="color: rgba(240, 248, 255, 0.582); margin-bottom: 100px; text-align: center;">
+            <i>See console for results</i>
+        </p>
         
-        <!-- Map container -->
-        <div id='map'></div>
-    </div>
+
+        <div class="form-group" style="margin-bottom: 3rem;">
+            <label for="name" id="name-label" style="color: rgb(20, 185, 61); text-align: center; font-family: monospace; font-weight: bolder; font-size: 1.5rem;"> navigator.geolocation</label>
+            <p style="color: white; text-align: center;"> when used with methods like '<i style="color: red; font-weight: bolder;">watchPosition(<span style="color: white;">...</span>)</i>', you can track coordinates of a user in real time.</p>
+        </div>
+
+        <p id="description" style="color: rgba(240, 248, 255, 0.582); margin-bottom: 100px; text-align: center;">
+            <i>See console for results</i>
+        </p>
+
+
+
+
+    </form>
 
     <!-- Include external JavaScript file -->
     <script src="script.js"></script>
 </body>
+
 </html>
